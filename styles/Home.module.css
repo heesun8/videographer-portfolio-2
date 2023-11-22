@@ -1,0 +1,171 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 6rem;
+  min-height: 100vh;
+  background-image: url("/bkgrnd3.png");
+
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading p {
+  margin: 0.3rem;
+}
+
+.headingImg {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 48rem;
+}
+
+.card {
+  /* position: relative; */
+
+  width: 100%;
+  height: 100%;
+  /* background-color: white; */
+  position: "absolute";
+  border: solid 8px white;
+  padding: 1em;
+  margin: 1em;
+  /* border: 2px black;
+  margin: 2 2 0 2; */
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2 2 0 2;
+}
+
+.iframe_container {
+    /* left: 0; */
+    justify-content: center;
+    align-items: center; 
+    width: 80%;
+    height: 80%;
+    /* position: "absolute"; */
+    margin: 2rem 2rem 0 8rem; 
+
+    /* border: solid 8px white; */
+
+
+    display: flex;
+}
+.iframe_container img{
+  width: 100%;
+  height: 90%;
+}
+.grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
+}
+.grid img{
+  object-fit:cover ;
+
+}
+
+/* .grid>* {
+  background-color: green;
+  height: 200px;
+} */
+
+
+
+.iframe {
+    /* top: 0;
+    left: 0; */
+    width: 65%;
+    height: 36rem;
+    position: "absolute";
+    border: solid 8px white;
+    padding: 1em;
+    margin: 1em;
+}
+
+
+.layeredCard {
+  position: relative;
+
+  /* Demo */
+  height: 6rem;
+  width: 6rem;
+}
+
+.layeredCard::before {
+  display: flex;
+
+  /* Put a card in the next row when previous cards take all width */
+  flex-wrap: wrap;
+
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+}
+
+.layeredCard__content {
+  /* There will be 3 cards per row */
+  flex-basis: 33.33333%;
+
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+/* Tablet and Smaller Desktop */
+/* @media (min-width: 701px) and (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+  }
+} */
+
+@media screen and (max-width: 850px){
+  .iframe_container {
+    flex-direction: column;
+    margin: 1rem 1rem 0 4.8rem;
+  }
+  .cards {
+    position: relative;
+    flex-direction: column;
+  }
+  .card iframe {
+    margin-left: 2rem;
+    width: 90%;
+  }
+  /* .headingImg {
+    width: 45px;
+  } */
+}
+
+@media screen and (max-width: 650px){
+  .iframe_container {
+    flex-direction: column;
+    margin: 1rem 1rem 0 4.8rem;
+  }
+  .cards {
+    position: relative;
+     flex-direction: column;
+  }
+  .card iframe {
+    margin-left: 11rem;
+    width: 50%;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
